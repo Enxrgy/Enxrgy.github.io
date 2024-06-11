@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kitai Sushi</title>
+  <link rel="shortcut icon" href="img/LogoKitai.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/carro.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">
+        <img src="img/LogoKitai.jpg" alt="" class="logo">
+      </div>
+      <div class="top-bar">
+        <a href="index.html" class="home">INICIO</a>
+        <a href="menu.html" class="menu">MENÚ</a>
+        <span class="cart">CARRO</span>
+      </div>
+    </nav>
+    <h1 class="carro-title" style="text-align: center;">CARRO</h1>
+  </header>
+
+  <div id="carrito-container">
+    <ul id="carrito-list"></ul>
+  </div>
+
+  <button id="ir-a-resumen" style="display: none;">IR A RESUMEN</button>
+  
+  <div id="resumen" style="display: none;">
+    <h2 class="resumen-title" style="text-align: center;">RESUMEN</h2>
+    <!-- Aquí puedes agregar cualquier otro contenido adicional que desees mostrar en el resumen -->
+  </div>
+
+  <div id="formulario-delivery" style="display: none;">
+    <h3 style="text-align: center;">LLENAR DATOS DE DELIVERY</h3>
+    <form id="delivery-form" style="text-align: center;">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required=""><br><br>
+
+      <label for="celular">Número celular:</label>
+      <input type="text" id="numero-celular" name="numero-celular" placeholder="+56" required pattern="\+56\d{9}">
+
+
+      <label for="calle">Calle:</label>
+      <input type="text" id="calle" name="calle" required=""><br><br>
+
+      <label for="numero">Número:</label>
+      <input type="text" id="numero" name="numero" required=""><br><br>
+
+      <label for="depto">Depto o Block:</label>
+      <input type="text" id="depto" name="depto" required=""><br><br>
+
+      <label for="comuna">Comuna:</label>
+      <select id="comuna" name="comuna" required>
+        <option value="">Seleccione una comuna...</option>
+        <option value="Lo Barnechea">Lo Barnechea</option>
+        <option value="Las Condes">Las Condes</option>
+        <option value="Vitacura">Vitacura</option>
+      </select><br><br>
+      
+
+      <button type="submit">REALIZAR PEDIDO</button>
+    </form>
+  </div>
+
+  <div id="total-pedido" style="display: none;">
+    <div id="subtotal"></div>
+    <div id="envio"></div>
+    <div id="total"></div>
+  </div>
+
+  <script src="js/carro.js" defer></script>
+
+</body>
+</html>

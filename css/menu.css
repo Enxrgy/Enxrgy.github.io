@@ -1,0 +1,317 @@
+/* Importar la fuente Quicksand desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Reset de estilos para evitar problemas de layout */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Configuraciones generales del documento HTML */
+html {
+  font-size: 62.8%; /* Tamaño base de fuente para facilitar el cálculo */
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+  font-size: 1.8rem; /* Tamaño de fuente base */
+  font-family: "Quicksand", sans-serif; /* Cambia la fuente para toda la página */
+  background-color: hsl(0, 0%, 0%); /* Color de fondo */
+  overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+  margin-bottom: 100px; /* Margen inferior */
+}
+
+/* Estilos del encabezado */
+.header {
+  width: 100%; /* Ancho completo */
+  max-width: 1300px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  display: flex; /* Mostrar en línea */
+  flex-direction: column; /* Dirección de apilamiento vertical */
+}
+
+/* Estilos de la barra de navegación */
+.nav {
+  width: 90%; /* Ancho del 90% del contenedor */
+  height: 100px; /* Altura fija */
+  margin: 0 auto; /* Centrar horizontalmente */
+  display: flex; /* Mostrar en línea */
+  justify-content: space-between; /* Distribuir elementos uniformemente */
+  align-items: center; /* Alinear verticalmente */
+  padding: 10px; /* Espaciado interno */
+}
+
+/* Estilos del logo en la barra de navegación */
+.logo {
+  width: 130px; /* Ancho de la imagen del logo */
+  height: 130px; /* Altura de la imagen del logo */
+  position: absolute; /* Establece posicionamiento absoluto */
+  left: 330px; /* Ajusta la distancia desde el borde izquierdo */
+  top: -5px; /* Ajusta la distancia desde la parte superior */
+}
+
+/* Estilos de la sección de héroe */
+.hero {
+  width: 100%; /* Ancho completo */
+  display: flex; /* Mostrar en línea */
+  align-items: flex-start; /* Alineación a la izquierda */
+  gap: 6rem; /* Espacio entre elementos */
+  padding: 3rem; /* Relleno interno */
+}
+
+@media (min-width: 920px) {
+  /* Cambios en el diseño del héroe para pantallas grandes */
+  .hero {
+    flex-direction: row-reverse; /* Cambia la dirección de apilamiento */
+    margin-top: 10px; /* Agrega un margen superior para separar el héroe de la barra de navegación */
+  }
+}
+
+.hero__illustration .hero-img {
+  width: 90%; /* Ancho completo */
+  max-width: 600px; /* Ancho máximo */
+  border-radius: 8px; /* Borde redondeado */
+}
+
+.hero__info .hero__title {
+  font-size: 5rem; /* Tamaño de fuente */
+  color: hsl(0, 0%, 100%); /* Color de texto */
+}
+
+.hero__info .cta {
+  background-color: hsl(0, 100%, 50%); /* Color de fondo */
+  margin-top:30px; /* Ajusta este valor según sea necesario */
+  font-size: 2.4rem; /* Tamaño de fuente para el texto */
+  color: #fff; /* Color de texto */
+  border-radius: 30px; /* Radio de borde */
+  width: 250px; /* Ancho */
+  height: 50px; /* Altura */
+  border: none; /* Sin borde */
+  display: flex; /* Mostrar en línea */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: center; /* Alinear horizontalmente */
+  gap: 5px; /* Espacio entre elementos */
+  font-family: "Quicksand", sans-serif; /* Fuente */
+  font-weight: 700; /* Grosor de fuente */
+  opacity: 0.9; /* Opacidad */
+  cursor: pointer; /* Cambiar el cursor */
+}
+
+.hero__info .cta span {
+  font-size: 2.5rem; /* Tamaño de fuente para la flecha */
+  margin-top: -5px; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilos de la barra de navegación */
+.nav {
+    width: 90%; /* Ancho del 90% del contenedor */
+    height: 100px; /* Altura fija */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: flex; /* Mostrar en línea */
+    align-items: center; /* Alinear verticalmente */
+    padding: 18.5px; /* Espaciado interno */
+  }
+  
+  /* Estilos para los botones en la barra de navegación */
+  .nav .home,
+  .nav .menu,
+  .nav .cart {
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Relleno interno */
+    font-size: 2.1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de fuente */
+    margin-right: 20px; /* Margen derecho para separar los botones */
+    font-family: "Quicksand", sans-serif; /* Fuente */
+  }
+  
+
+/* Ajuste de márgenes para separar los botones */
+.nav .home {
+  margin-right: 0px; /* Ajusta el margen derecho del botón de "Inicio" */
+}
+
+.nav .menu {
+  margin-right: 0; /* Elimina el margen derecho del botón de "Menú" */
+}
+
+.nav .cart {
+  margin-right: -8.5px;
+}
+
+/* Efecto de brillo al pasar el cursor sobre los botones */
+.nav .home:hover,
+.nav .menu:hover,
+.nav .cart:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Color de fondo con transparencia */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra para el efecto de brillo */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para los círculos con imágenes */
+.circle-section {
+    display: grid; /* Cambiamos a grid */
+    grid-template-columns: repeat(4, 200px); /* Ancho fijo de 360px para cada columna */
+    gap: 110px; /* Espacio entre los círculos */
+    margin-top: 200px; /* Reducimos el margen superior */
+    margin-bottom: 30px; /* Espacio inferior */
+    justify-content: center; /* Centramos horizontalmente */
+    position: relative; /* Agregamos posicionamiento relativo al contenedor */
+}
+  
+  /* Estilos para cada círculo */
+  .circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px; /* Ajusta el margen horizontal de los círculos */
+    position: relative; /* Agregamos posicionamiento relativo */
+    z-index: 1; /* Aseguramos que los botones estén en una capa superior */
+  }
+  
+  .circle img {
+    border-radius: 50%; /* Hace la imagen circular */
+    width: 180px; /* Tamaño de la imagen */
+    height: 180px; /* Tamaño de la imagen */
+  }
+  
+  /* Estilos para el texto debajo de las imágenes */
+  .circle p {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+/* Estilos para los botones debajo de los círculos */
+.circle-buttons button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 1.3rem;
+    font-weight: bold; /* Grosor de fuente */
+    background-color: hsl(0, 100%, 50%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.circle-buttons button:hover {
+  background-color: hsl(0, 100%, 60%);
+}
+
+/* Estilos para el texto debajo de las imágenes */
+.circle p {
+  color: #fff; /* Color de texto blanco */
+  margin-top: 15px; /* Espacio superior */
+  font-size: 1.9rem; /* Tamaño de fuente */
+  text-align: center; /* Alineación centrada */
+  font-weight: bold; /* Grosor de fuente */
+}
+
+
+
+.hero__info .cta:hover {
+  background-color: hsl(0, 100%, 60%); /* Cambia el color de fondo al pasar el cursor */
+}
+
+.circle-buttons button:hover {
+  background-color: hsl(0, 100%, 60%); /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilos para los botones en el estado normal */
+.nav button,
+.circle-buttons button,
+.hero__info .cta {
+  transition: background-color 0.9s ease, box-shadow 0.9s ease, transform 1.3s ease; /* Agregamos la transición en el estado normal */
+}
+
+/* Estilos para el efecto de levantamiento al pasar el cursor sobre los botones */
+.nav button:hover,
+.circle-buttons button:hover,
+.hero__info .cta:hover {
+  background-color: hsl(0, 100%, 50%); /* Mantenemos el color de fondo original */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  border-radius: 25px; /* Hacemos los bordes más redondeados */
+  transform: scale(1.05); /* Ajustamos la escala del botón al 105% */
+}
+
+  
+/* Estilos para el título del menú */
+.menu-title {
+    font-size: 5rem; /* Tamaño de fuente */
+    color: #fff; /* Color de texto blanco */
+    margin-top: 242px; /* Espacio superior */
+    margin-left: -780px; /* Espacio a la izquierda */
+    text-align: left; /* Alineación a la izquierda */
+}
+
+/* Estilos para el contenedor del subtítulo */
+.subtitle-container {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 230px; /* Ajuste vertical */
+    left: 334px; /* Ajuste horizontal */
+}
+
+/* Estilos para el subtítulo del menú */
+.menu-subtitle {
+    font-size: 2.8rem; /* Tamaño de fuente */
+    color: #fff; /* Color de texto blanco */
+}
+
+/* Estilos para el segundo subtítulo del menú */
+.menu-subtitle2 {
+    font-size: 2.8rem; /* Tamaño de fuente */
+    color: #fff; /* Color de texto blanco */
+    margin-top: 80px; /* Espacio superior */
+    text-align: center; /* Alineación centrada */
+}
+
+/* Estilos para el tercer subtítulo del menú */
+.menu-subtitle3 {
+    font-size: 2.8rem; /* Tamaño de fuente */
+    color: #fff; /* Color de texto blanco */
+    margin-top: 490px; /* Espacio superior */
+    text-align: center; /* Alineación centrada */
+}
+
+a {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Hereda el color del texto */
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(100%);
+  opacity: 0; /* Asegura que la notificación esté inicialmente oculta */
+  font-size: 1.8rem; /* Tamaño de fuente */
+  font-weight: bold; /* Grosor de fuente */
+  font-family: "Quicksand", sans-serif; /* Fuente */
+}
+
+
+.notification.show {
+  transform: translateY(0);
+  opacity: 1; /* Muestra la notificación */
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.circle-buttons .special-button {
+  margin-top: 34.3px; /* Ajusta el margen superior según sea necesario */
+}
+
